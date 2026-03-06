@@ -1,3 +1,24 @@
+
+// attempt at making a pie chart // 
+const pie = document.getElementById('pie')
+
+
+function round() {
+    const doughnut = new Chart(pie, {
+        type: 'doughnut',
+        data: {
+            labels: ['Green', 'Red', 'Blue', 'Yellow', 'pink', 'purple', 'cyan'],
+            datasets: [{
+                data: [300, 50, 100],
+            }]
+        },
+        options: {
+            responsive: false
+        }
+    });
+}
+round()
+
 const careerSelect = document.getElementById(career);
 const educationSelect = document.getElementById(edu);
 const housingSelect = document.getElementById(housing);
@@ -18,3 +39,4 @@ lifeSelect.value = lifestyle[0];
 essentialSelect.value = essential[0];
 housingSelect.value = housing[0];
 educationSelect.value = educaton[0];
+

@@ -37,7 +37,6 @@ header img{
     color: white;
 }
 
-
 #inputs > section > input{
     height: 40px;
     width: 250px;
@@ -51,6 +50,7 @@ header img{
 #inputs > section > #career {
 margin-left: 0.5rem;    
 }
+
 
 section {
     margin: 2em;
