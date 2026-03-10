@@ -1,4 +1,5 @@
-
+/* fetch API this link https://eecu-data-server.vercel.app/data */
+const careerList = [fetch(`https://eecu-data-server.vercel.app/data`)];
 
 const [...sections] = document.querySelectorAll("section");
 const all_inputs = sections.map((section) => section.querySelectorAll("input"));
@@ -18,16 +19,26 @@ function update() {
     current_chart = new Chart(canvas, {
         type: 'doughnut',
         data: {
-            labels: document
-                .querySelectorAll('section')
-                .values()
-                .map(section => section.firstElementChild.textContent),
+            labels: ['Education', 'Housing', `Essentials`, `Lifestyle`, `Savings`],
             datasets: [
                 {
                     label: 'Monthly (USD)',
                     data: all_inputs.map(inputs => sum(inputs))
                 }
             ]
+        },
+        options: {
+            responsive: false,
+            /*elements: {
+                arc: {
+                    borderWidth: 0
+                }
+            },*/
+            plugins: {
+                legend: {
+                    display: false
+                }
+            }
         }
     });
 }
