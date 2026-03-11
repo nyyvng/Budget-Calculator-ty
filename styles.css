@@ -17,8 +17,8 @@ body{
 main {
     display: flex;
     align-items: flex-start;
-    flex-direction: column;
     justify-content: space-between;
+    gap: 100px;
     margin-left: 5%;
     margin-right: 10%;
 }
@@ -53,56 +53,7 @@ header img{
     
 }
 
-#inputs > section > input{
-    height: 40px;
-    width: 250px;
-    border-radius: 100px;
-}
 
-#inputs > section > h3 {
-    margin-bottom: 0.5rem;
-}
-
-#inputs > section > #career {
-margin-left: 0.5rem;    
-}
-
-
-section {
-    margin: 2em;
-}
-
-section > img {
-    margin: 1em;
-}
-
-button{
-    background-color: red;
-}
-
-
-#inputs > section > button {
-    margin-left: 3em;
-    border: none;
-}
-
-button:hover {
-    cursor: pointer;
-}
-
-#inputs > section > #find {
-    margin-left: -2rem;
-    margin-top: -1em;
-    margin-bottom: -0.2em;
-}
-
-[alt='info']{
-    margin-bottom: -12px;
-}
-
-#pie {
-    width: 200px;
-}
 
 /* career select */
 .career #career {
@@ -113,3 +64,92 @@ button:hover {
     border-radius: 100px;
 }
 
+/* Input sections */
+.inputs {
+    display: flex;
+    flex-direction: column;
+    place-content: center;
+}
+
+/* All inputs */
+input, select {
+    height: 40px;
+    width: 250px;
+    border-radius: 100px;
+    border: 0;
+}
+
+input:focus {
+    outline: none;
+}
+
+#inputs > section > h3 {
+    margin-bottom: 0.5rem;
+}
+
+.inputRow {
+    display: flex;
+    align-items: center;
+}
+
+.inputRow > button {
+    margin-left: 1em;
+    border: none;
+    background-color: rgba(240, 248, 255, 0);
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+.inputRow .inputBox {
+    display: flex;
+    align-items: center;
+
+    background-color: white;
+    border-radius: 20px;
+    padding: 0px 10px;
+}
+
+.inputBox #find {
+    margin-left: 1em;
+}
+
+[alt='info']{
+    margin-bottom: -12px;
+}
+
+
+/* Chart Area */
+#chartArea {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#pie {
+    width: 200px;
+}
+
+#chartArea #popUp {
+    margin-top: 50px;
+    background-color: white;
+    padding: 15px;
+    border-radius: 20px;
+}
+
+#popUp.hidden {
+    display: none;
+}
+
+@media screen and (max-width: 900px) {
+    main {
+        flex-direction: column;
+        align-items: center;
+        gap: 100px;
+    }
+
+    #chartArea {
+        order: -1;
+    }
+}
