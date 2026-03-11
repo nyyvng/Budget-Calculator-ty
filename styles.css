@@ -1,18 +1,22 @@
 @import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap');
 
-:root{
+:root {
     --prim: black;
     --sec: #0A5BA8;
     --font: 'League Spartan';
-} /*creating all the variables to use later in the css*/
+}
+
+/*creating all the variables to use later in the css*/
 
 
-body{
+body {
     font-family: var(--font);
     background-color: var(--prim);
     margin: 0;
-    padding: 0; 
-}/*backgroung color and the font of the whole doc*/
+    padding: 0;
+}
+
+/*backgroung color and the font of the whole doc*/
 
 main {
     display: flex;
@@ -23,48 +27,60 @@ main {
     margin-right: 10%;
 }
 
-h3, span {
+h3,
+span {
     font-size: 24px;
     font-weight: bold;
 }
 
-header{
+header {
     display: flex;
     color: var(--sec);
     justify-content: space-between;
     margin: 2em;
-}/*customizing the header*/
+}
+
+/*customizing the header*/
 
 
-header h1{
+header h1 {
     font-size: 67px;
-}/*bigger h1 setting*/
+}
 
-header img{
+/*bigger h1 setting*/
+
+header img {
     min-width: 267px;
     max-height: 106px;
     margin: 2em;
     margin-right: 3em;
-}/*setting a max height and min width for the */
-
-.career, .edu, .housing, .ess, .life, .save {
-    color: white;
-    margin-left: 2em;
-    
 }
 
-#inputs > section > input{
+/*setting a max height and min width for the */
+
+.career,
+.edu,
+.housing,
+.ess,
+.life,
+.save {
+    color: white;
+    margin-left: 2em;
+
+}
+
+#inputs>section>input {
     height: 40px;
     width: 250px;
     border-radius: 100px;
 }
 
-#inputs > section > h3 {
-    margin-bottom: 0.5rem;
+#inputs>section>h3 {
+    margin-bottom: 2rem;
 }
 
-#inputs > section > #career {
-margin-left: 0.5rem;    
+#inputs>section>#career {
+    margin-left: 0.5rem;
 }
 
 
@@ -72,16 +88,16 @@ section {
     margin: 2em;
 }
 
-section > img {
+section>img {
     margin: 1em;
 }
 
-button{
-    background-color: red;
+button {
+    background-color: transparent;
 }
 
 
-#inputs > section > button {
+#inputs>section>button {
     margin-left: 3em;
     border: none;
 }
@@ -90,13 +106,13 @@ button:hover {
     cursor: pointer;
 }
 
-#inputs > section > #find {
+#inputs>section>#find {
     margin-left: -2rem;
     margin-top: -1em;
     margin-bottom: -0.2em;
 }
 
-[alt='info']{
+[alt='info'] {
     margin-bottom: -12px;
 }
 
@@ -112,4 +128,3 @@ button:hover {
     width: 250px;
     border-radius: 100px;
 }
-
